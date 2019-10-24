@@ -5,19 +5,22 @@ using UnityEngine;
 public class Playermove : MonoBehaviour
 {
     private Animator animator;
-    private float speed;
-    // Start is called before the first frame update
+    public float speed;
+    Rigidbody2D rb2d;
+
     void Start()
     {
         animator = GetComponent<Animator>();
+        rb2d = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
 
-        }
+
+        if (Input.GetMouseButtonDown(0))
+            animator.SetBool("OnClick", true);
+        else
+            animator.SetBool("OnClick", false);
     }
 }
