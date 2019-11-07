@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3303475185616994054}
   - component: {fileID: 6800636010168306982}
   - component: {fileID: 1022838053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6444942915928136706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ballspawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -19,9 +19,11 @@ public class Playermove : MonoBehaviour
 
     void Update()
     {
+        //プレイヤー移動
         transform.Translate(Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime, 0, 0);
 
-        if (Input.GetMouseButtonDown(0)) //クリックした時、ボールを投げる
+        //クリックした時、ボールを投げる
+        if (Input.GetMouseButtonDown(0))
         {
             animator.SetBool("OnClick", true);
             BallThrow ();
@@ -32,8 +34,16 @@ public class Playermove : MonoBehaviour
 
     void BallThrow()
     {
+        //ボール生成
         GameObject newBullet = Instantiate(fireball, ballspawn.position, Quaternion.identity) as GameObject;
-        newBullet.GetComponent<Rigidbody2D>().AddForce(Vector3.up * power);
-    }
 
+        //クリックした場所の取得
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        //向きを生成
+        Vector3 BallDirection = Vector3.Scale((mouseWorldPos - transform.position), new Vector3(1, 1, 0)).normalized;
+
+        //ボール速さ
+        newBullet.GetComponent<Rigidbody2D>().velocity = BallDirection * power;
+    }
 }
