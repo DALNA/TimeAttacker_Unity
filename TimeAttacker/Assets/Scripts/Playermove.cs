@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Playermove : MonoBehaviour
 {
+    [SerializeField] private GameObject fireball;
     private Animator animator;
-    public float speed = 5f; //キャラクタースピード
-    public float power = 1000f; //投げるパワー
-    public GameObject fireball;
+    public float P_speed = 5f; //キャラクタースピード
+    public float B_power = 1000f; //投げるパワー
+    public bool isThrow = true;
     public Transform ballspawn;
     Rigidbody2D rb2d;
 
@@ -17,13 +18,19 @@ public class Playermove : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
     }
 
+    void checkthrow()
+    {
+        if (fireball) isThrow = false;
+        else isThrow = true;
+    }
+
     void Update()
     {
         //プレイヤー移動
-        transform.Translate(Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime, 0, 0);
+        transform.Translate(Input.GetAxisRaw("Horizontal") * P_speed * Time.deltaTime, 0, 0);
 
         //クリックした時、ボールを投げる
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isThrow == true)
         {
             animator.SetBool("OnClick", true);
             BallThrow ();
@@ -44,6 +51,6 @@ public class Playermove : MonoBehaviour
         Vector3 BallDirection = Vector3.Scale((mouseWorldPos - transform.position), new Vector3(1, 1, 0)).normalized;
 
         //ボール速さ
-        newBullet.GetComponent<Rigidbody2D>().velocity = BallDirection * power;
+        newBullet.GetComponent<Rigidbody2D>().velocity = BallDirection * B_power;
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
-
     public float deleteTime = 1.3f;
     void Start()
     {
