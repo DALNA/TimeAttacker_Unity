@@ -116,10 +116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552bb3d8f9d37464c92680884b4357f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P_speed: 5
-  B_power: 11
   fireball: {fileID: 1590731925582651347, guid: 0efb40de454b6764f9b9012e43b36f7a,
     type: 3}
+  P_speed: 5
+  B_power: 11
   ballspawn: {fileID: 6444942915928136706}
 --- !u!50 &6800636010168306982
 Rigidbody2D:
@@ -199,7 +199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2826097795571230437}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.08, y: 0.17, z: -2.19402}
+  m_LocalPosition: {x: 0.08, y: 0.04, z: -2.19402}
   m_LocalScale: {x: 0.13302457, y: 0.14842293, z: 0.73855245}
   m_Children: []
   m_Father: {fileID: 1649322693275897573}

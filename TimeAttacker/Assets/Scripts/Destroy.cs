@@ -5,14 +5,23 @@ using UnityEngine;
 public class Destroy : MonoBehaviour
 {
     public float deleteTime = 1.3f;
+    public bool isThrow = true;
+
     void Start()
     {
         Destroy(gameObject, deleteTime);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+
+    //ボールがあるか伝える
+    private void OnDestroy()
+    {
+        var player = GameObject.Find("Player");
+        var move = player.GetComponent<Playermove>();
+        move.BulletDestroy();
     }
 }

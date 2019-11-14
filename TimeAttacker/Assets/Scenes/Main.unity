@@ -120,7 +120,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &847482819
+--- !u!1 &526223998
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,29 +128,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 847482821}
-  - component: {fileID: 847482820}
-  m_Layer: 10
-  m_Name: floor
+  - component: {fileID: 526224000}
+  - component: {fileID: 526223999}
+  m_Layer: 0
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &847482820
+--- !u!61 &526223999
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847482819}
+  m_GameObject: {fileID: 526223998}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000011444092, y: 0}
+  m_Offset: {x: -0.04225588, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -161,23 +161,23 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 28.488647, y: 1}
+  m_Size: {x: 18.550442, y: 1}
   m_EdgeRadius: 0
---- !u!4 &847482821
+--- !u!4 &526224000
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 847482819}
+  m_GameObject: {fileID: 526223998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -5.55, z: -0.6953125}
+  m_LocalPosition: {x: 0, y: -5.49, z: -1.4358287}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1544171959
+--- !u!1 &566391984
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,9 +185,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1544171962}
-  - component: {fileID: 1544171961}
-  - component: {fileID: 1544171960}
+  - component: {fileID: 566391987}
+  - component: {fileID: 566391986}
+  - component: {fileID: 566391985}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -195,21 +195,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1544171960
+--- !u!81 &566391985
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544171959}
+  m_GameObject: {fileID: 566391984}
   m_Enabled: 1
---- !u!20 &1544171961
+--- !u!20 &566391986
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544171959}
+  m_GameObject: {fileID: 566391984}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -246,13 +246,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &1544171962
+--- !u!4 &566391987
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544171959}
+  m_GameObject: {fileID: 566391984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -260,7 +260,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &7452119930942437350
+--- !u!1001 &2102558005
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -275,12 +275,12 @@ PrefabInstance:
     - target: {fileID: 1649322693275897573, guid: 0bb509c3cd3079b4c9cebd531fbe4397,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.99
+      value: 5.86
       objectReference: {fileID: 0}
     - target: {fileID: 1649322693275897573, guid: 0bb509c3cd3079b4c9cebd531fbe4397,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.85
+      value: -2.78
       objectReference: {fileID: 0}
     - target: {fileID: 1649322693275897573, guid: 0bb509c3cd3079b4c9cebd531fbe4397,
         type: 3}
@@ -325,6 +325,11 @@ PrefabInstance:
     - target: {fileID: 1649322693275897573, guid: 0bb509c3cd3079b4c9cebd531fbe4397,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649322693275897574, guid: 0bb509c3cd3079b4c9cebd531fbe4397,
+        type: 3}
+      propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
