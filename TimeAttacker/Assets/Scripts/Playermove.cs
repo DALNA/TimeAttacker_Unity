@@ -42,7 +42,7 @@ public class Playermove : MonoBehaviour
 
     void BallThrow()
     {
-        //ボール生成。ボールが画面上にあるので、投げられなくなる。
+        //ボール生成。ボールが画面上にある場合、投げられなくなる。
         GameObject newBullet = Instantiate(fireball, ballspawn.position, Quaternion.identity) as GameObject;
         bulletAlive = true;
 
@@ -53,7 +53,7 @@ public class Playermove : MonoBehaviour
         newBullet.GetComponent<Rigidbody2D>().velocity = BallDirection * B_power;
     }
 
-    //ボールが消えた時、投げられるようになる。
+    //画面上にボールが無い時、投げられるようになる。
     public void BulletDestroy()
     {
         bulletAlive = false;

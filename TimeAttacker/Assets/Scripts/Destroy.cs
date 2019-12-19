@@ -6,6 +6,7 @@ public class Destroy : MonoBehaviour
 {
     public float deleteTime = 1.3f;
     public bool isThrow = true;
+    private string objtag = "obj";
 
     void Start()
     {
@@ -23,5 +24,17 @@ public class Destroy : MonoBehaviour
         var player = GameObject.Find("Player");
         var move = player.GetComponent<Playermove>();
         move.BulletDestroy();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        foreach (ContactPoint2D point in collision.contacts)
+        {
+            Debug.Log(point.point);
+        }
+        if(collision.collider.tag == objtag)
+        {
+            Destroy(gameObject);
+        }
     }
 }
