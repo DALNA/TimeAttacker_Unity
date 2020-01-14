@@ -6,10 +6,12 @@ public class Playermove : MonoBehaviour
 {
     private Animator animator;
 
-    public GameObject fireball;
+    public Destroy fireball;
     public Transform ballspawn;
     public float P_speed = 5f; //プレイヤースピード
     public float B_power = 1000f; //投げるパワー
+
+    private string playtag = "Player";
 
     bool bulletAlive = false; //ボールが画面上にあるか
 
@@ -38,12 +40,15 @@ public class Playermove : MonoBehaviour
         }
         else
             animator.SetBool("OnClick", false);
+
+       
     }
 
     void BallThrow()
     {
         //ボール生成。ボールが画面上にある場合、投げられなくなる。
-        GameObject newBullet = Instantiate(fireball, ballspawn.position, Quaternion.identity) as GameObject;
+        var newBullet = Instantiate(fireball, ballspawn.position, Quaternion.identity) as Destroy;
+        newBullet.playerMove = this;
         bulletAlive = true;
 
         //向きを生成
