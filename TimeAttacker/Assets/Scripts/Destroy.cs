@@ -7,6 +7,7 @@ public class Destroy : MonoBehaviour
     public float deleteTime = 1.3f;
     public bool isThrow = true;
     public Playermove playerMove { set; private get; }
+
     private string objtag = "obj";
 
     void Start()
@@ -16,13 +17,13 @@ public class Destroy : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     //ボールがあるか伝える
     private void OnDestroy()
     {
-        playerMove.BulletDestroy();
+        playerMove.BulletDestroy(transform.position);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

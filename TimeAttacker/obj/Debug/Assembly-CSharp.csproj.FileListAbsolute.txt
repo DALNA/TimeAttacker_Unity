@@ -814,3 +814,6 @@ D:\student\Desktop\clone\TimeAttacker\obj\Debug\Assembly-CSharp.csproj.CoreCompi
 D:\student\Desktop\clone\TimeAttacker\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 D:\student\Desktop\clone\TimeAttacker\obj\Debug\Assembly-CSharp.dll
 D:\student\Desktop\clone\TimeAttacker\obj\Debug\Assembly-CSharp.pdb
+C:\Users\student\Desktop\clone\TimeAttacker\Temp\bin\Debug\UnityEditor.iOS.Extensions.Common.dll
+C:\Users\student\Desktop\clone\TimeAttacker\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+C:\Users\student\Desktop\clone\TimeAttacker\Temp\bin\Debug\Mono.Posix.dll
