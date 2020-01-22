@@ -7,8 +7,9 @@ public class Destroy : MonoBehaviour
     public float deleteTime = 1.3f;
     public bool isThrow = true;
     public Playermove playerMove { set; private get; }
+    public string objtag = "obj";
 
-    private string objtag = "obj";
+    public bool playerwarp = false;
 
     void Start()
     {
@@ -28,16 +29,11 @@ public class Destroy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // ボールの当たったポイントを取得
-        foreach (ContactPoint2D point in collision.contacts)
-        {
-            Debug.Log(point.point);
-        }
-
         // 壁や地面に当たった時消える
         if(collision.collider.tag == objtag)
         {
             Destroy(gameObject);
+            playerwarp = true;
         }
     }
 }

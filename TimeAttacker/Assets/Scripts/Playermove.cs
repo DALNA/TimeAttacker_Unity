@@ -16,8 +16,9 @@ public class Playermove : MonoBehaviour
     private float overChangePositionY = 2.0f;
     public Destroy fireball;
     public Transform ballspawn;
-    public float P_speed = 5f; //プレイヤースピード
-    public float B_power = 1000f; //投げるパワー
+    public float P_speed; //プレイヤースピード
+    public float B_power; //投げるパワー
+    public Destroy playerwarp;
 
     bool bulletAlive = false; //ボールが画面上にあるか
 
@@ -86,6 +87,7 @@ public class Playermove : MonoBehaviour
         newBullet.playerMove = this;
         bulletAlive = true;
 
+
         //向きを生成
         Vector3 BallDirection = Vector3.Scale((mouseWorldPos - transform.position), new Vector3(1, 1, 0)).normalized;
 
@@ -96,8 +98,11 @@ public class Playermove : MonoBehaviour
     //画面上にボールが無い時、投げられるようになる。
     public void BulletDestroy(Vector3 pos)
     {
-        pos.y += overChangePositionY;
-        transform.position = pos;
+        if(playerwarp)
+        {
+            pos.y += overChangePositionY;
+            transform.position = pos;
+        }
         bulletAlive = false;
     }
 }
