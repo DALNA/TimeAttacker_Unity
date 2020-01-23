@@ -18,7 +18,6 @@ public class Playermove : MonoBehaviour
     public Transform ballspawn;
     public float P_speed; //プレイヤースピード
     public float B_power; //投げるパワー
-    public Destroy playerwarp;
 
     bool bulletAlive = false; //ボールが画面上にあるか
 
@@ -98,11 +97,8 @@ public class Playermove : MonoBehaviour
     //画面上にボールが無い時、投げられるようになる。
     public void BulletDestroy(Vector3 pos)
     {
-        if(playerwarp)
-        {
-            pos.y += overChangePositionY;
-            transform.position = pos;
-        }
+        pos.y += overChangePositionY;
+        transform.position = pos;
         bulletAlive = false;
     }
 }
